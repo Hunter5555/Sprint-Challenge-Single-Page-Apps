@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: The page doesn't always do a full refresh and less data is being processed so it is generally faster.
 
 ## Project Set Up
 

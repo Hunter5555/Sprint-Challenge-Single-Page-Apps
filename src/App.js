@@ -1,11 +1,46 @@
 import React from "react";
 import Header from "./components/Header.js";
-
-
+import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import CharacterList from "./components/CharacterList";
+import LocationsList from "./components/LocationsList";
+import WelcomePage from "./components/WelcomePage.js";
+import SearchForm from "./components/SearchForm.js";
+// import RickAndMortyBackground from './img/rick-and-morty-iva.jpg';
+const HeaderStyle = styled.div`
+background-color: #9ef6ad;
+`
+const NavContentStyle = styled.div`
+display: flex;
+justify-content: center;
+text-align: justify;
+margin-top: 2.5%;
+`
 export default function App() {
   return (
+    <HeaderStyle>
+
     <main>
       <Header />
-    </main>
-  );
+      <Route exact path="/" component={WelcomePage}/> 
+      <Route path="/CharacterList" component={CharacterList}/> 
+
+<NavContentStyle>
+<div className="App">
+    <div>
+    <Link to="/">Home</Link>
+    </div>
+    <div>
+    <Link to="/characterList">Character List</Link>
+    </div>
+    <div>
+    <Link to="/locationList">Location List</Link>
+    </div>
+
+  </div>
+  </NavContentStyle> 
+  </main>
+  </HeaderStyle>
+);
 }
