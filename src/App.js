@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import CharacterList from "./components/CharacterList";
+import LocationsList from "./components/LocationsList";
 import WelcomePage from "./components/WelcomePage.js";
 import SearchForm from "./components/SearchForm.js";
 // import RickAndMortyBackground from './img/rick-and-morty-iva.jpg';
@@ -33,7 +34,9 @@ export default function App() {
     <div>
     <Link to="/characterList">Character List</Link>
     </div>
-
+    <div>
+    <Link to="/locationList">Location List</Link>
+    </div>
 
   </div>
   </NavContentStyle> 
